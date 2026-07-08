@@ -1,0 +1,163 @@
+/* ─── Proxy Panel ─── */
+.proxy-panel {
+  padding: 24px;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.proxy-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  margin-bottom: 2px;
+}
+
+.proxy-header p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ─── Status Card ─── */
+.proxy-status-card {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.proxy-status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.proxy-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proxy-status-indicator span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ─── Proxy Details Grid ─── */
+.proxy-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-primary);
+}
+
+.proxy-detail-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.proxy-detail-value {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+/* ─── Setup Card ─── */
+.proxy-setup-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.proxy-section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* ─── Instruction Step ─── */
+.proxy-step {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.proxy-step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.proxy-step-content {
+  flex: 1;
+}
+
+.proxy-step-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.proxy-step-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+/* ─── Code Block ─── */
+.proxy-code-block {
+  margin-bottom: 12px;
+}
+
+.proxy-code-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.proxy-code-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+}
+
+.proxy-code-row code {
+  flex: 1;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .proxy-panel {
+    padding: 16px;
+  }
+  .proxy-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
